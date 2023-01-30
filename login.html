@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>케어링</title>
+    <script defer src="./js/login.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <a href="./index.html" class="material-icons" id="home">home</a>
+    <!-- 로딩화면 -->
+    <div class="loading-container">
+        <div class="loading"></div>
+        <div id="loading-text">CareRing<br><br><span>캡스톤1조<br>케어링</span></div>
+    </div>
+    <!-- 네비게이션 -->
+    <input type="checkbox" id="navInput">
+    <label class="openbtn" for="navInput">
+        <div id="openbtn-top"></div>
+        <div id="openbtn-mid"></div>
+        <div id="openbtn-bot"></div>
+      </label>
+
+    <nav id="nav">
+        <a href="#">
+            <h1>내 정보</h1>
+            <div class="info">
+                <span class="material-icons" id="human">human</span>
+                <br>
+                <span>Lv 21</span>
+                <br>
+                <span>김근육</span>
+                <br>
+                <span>#프로틴중독 #운동마스터</span>
+            </div>
+        </a>
+        <a href="./login.html">마이페이지</a>
+        <a href="./index.html">스톱워치</a>
+        <a href="./facereader.html">운동관상알아보기</a>
+        <a href="#">커뮤니티(예정)</a>
+        <a href="#">캘린더(예정)</a>
+        <a href="#">자세교정(예정)</a>
+        <a href="#">칼로리계산(예정)</a>
+        <a href="#">눈바디알아보기(예정)</a>
+        <a href="#">음식칼로리계산(예정)</a>
+        <a href="#">운동MBTI(예정)</a>
+        <!-- <a href="./camera.html">인바디입력+운동추천</a> -->
+        <!-- <a href="./squat.html">스쿼트 자세교정(test)</a> -->
+        <!-- <a href="./community.html">커뮤니티</a> -->
+        <!-- <a href="#">운동 캘린더</a> -->
+    </nav>
+    <!-- 메인화면 로그인창 -->
+    <section class="login">
+        <div class="wrap">
+            <h1>메인화면 로그인창</h1>
+            <form class="login_form">
+                <input type="email" placeholder="이메일" class="email" id="id">
+                <br>
+                <input type="password" placeholder="비밀번호" id="password">
+                <br>
+                <button id="btn" class="btn btn--reverse">로그인</button>
+                <!-- <input type="submit" value="로그인" id="btn" class="btn btn--reverse"> -->
+                <a href="./signup.html" class="btn">회원가입</a>
+
+
+                <br>
+
+                <a href="#" class="btn long__btn non-members">비회원으로이용하기</a>
+            </form>
+        </div>
+    </section>
+    <!-- 카카오로그인 -->
+    <!-- <div>
+        <a href="javascript:kakaoLogin();"><img src="./kakao_login.png" alt="카카오계정 로그인" style="height: 100px;" /></a>
+        <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+        <script>
+            window.Kakao.init('4d5d5eccc584fa9ccae17d9d1767659b');
+
+            function kakaoLogin() {
+                window.Kakao.Auth.login({
+                    scope: 'profile, account_email, gender, age_range, birthday', //동의항목 페이지에 있는 개인정보 보호 테이블의 활성화된 ID값을 넣습니다.
+                    success: function(response) {
+                        console.log(response) // 로그인 성공하면 받아오는 데이터
+                        window.Kakao.API.request({ // 사용자 정보 가져오기 
+                            url: '/v2/user/me',
+                            success: (res) => {
+                                const kakao_account = res.kakao_account;
+                                console.log(kakao_account)
+                            }
+                        });
+                        // window.location.href='/ex/kakao_login.html' //리다이렉트 되는 코드
+                    },
+                    fail: function(error) {
+                        console.log(error);
+                    }
+                });
+            }
+        </script>
+    </div> -->
+</body>
+
+</html>
